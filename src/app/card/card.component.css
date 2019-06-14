@@ -1,0 +1,40 @@
+.card {
+    background: #1a1a1a;
+    max-width: 150px;
+    /*flex: 0 1 24%;*/
+    position: relative;
+    border-radius: 15px;
+}
+
+img{
+    max-height: 14em;
+}
+
+.title{
+    color: white;
+    font-size: 2rem;
+    font-weight: lighter;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.release_date{
+    color: #ff1744;
+}
+
+a{
+    text-decoration: none;
+}
+
+.zoomContainer{
+    /*transform: scale(1);*/
+    -webkit-transition: 200ms ease-in;
+    transition: 200ms ease-in;
+
+}
+
+.zoomContainer:hover{
+    transform: scale(1.05);
+    /*transition: 200ms ease-in;*/
+}

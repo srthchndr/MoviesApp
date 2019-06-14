@@ -1,0 +1,7 @@
+<div *ngIf="data.trailer" class='main-container' mat-dialog-title>
+  <a href="javascript:void(0);" (click)='onClosePlayer()' class='link'>X</a>
+  <h3 *ngIf="data.trailer.name" >{{data.trailer.name}}</h3>
+</div>
+<div mat-dialog-content>
+    <iframe [src]="data.trailer.key" allowfullscreen width='410'  height= '300' frameborder="0"></iframe>
+</div>

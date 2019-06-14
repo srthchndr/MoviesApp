@@ -1,0 +1,16 @@
+.main-container{
+    position: relative;
+}
+
+.link{
+    right: 2%;
+    top: 2%;
+    text-decoration: none;
+    position: absolute;
+    color: #ff3d00;
+}
+
+iframe{
+    height: 100%;
+    width: 100%;
+}

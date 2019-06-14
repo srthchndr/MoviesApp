@@ -1,0 +1,25 @@
+<!--
+
+      <article class="card">
+        <a [routerLink] = "model.isMovie ? '/movie/' + model.id : '/tv-show/' + model.id">
+          <img *ngIf="model.poster_path" src= "https://image.tmdb.org/t/p/w300/{{model.poster_path}}" alt="{{model.title}} image">
+          <div>
+            <p *ngIf="model.original_title">{{model.original_title}}</p>
+            <p *ngIf="model.release_date">{{model.release_date}}</p>
+          </div>
+        </a>
+      </article> -->
+      <div class='zoomContainer'>
+          <a [routerLink] = "'/movie/' + model.id"><!-- : '/tv-show/' + model.id-->
+            <mat-card class="card">
+              <img *ngIf="model.poster_path" mat-card-image src="https://image.tmdb.org/t/p/w185/{{model.poster_path}}" alt="{{model.title}} image">
+              <mat-card-content>
+                <p *ngIf="model.original_title" class='title'>{{model.original_title}}</p>
+                <p *ngIf="model.release_date" class='release_date'>Released: {{model.release_date | date }}</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+      </div>
+
+
+

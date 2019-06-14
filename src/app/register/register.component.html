@@ -1,0 +1,31 @@
+<div class="bg">
+  <div class="center-component">
+    <form (ngSubmit) = "onRegister(username.value, password.value, confirmPass.value)">
+      <div>
+        <h3 style="letter-spacing: 2px; font-size: 2em;">Register</h3>
+          <mat-form-field appearance="outline">
+                  <mat-label>Username</mat-label>
+                  <input #username matInput placeholder="Enter username">
+          </mat-form-field>
+      </div>
+      <div>
+          <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input #password matInput placeholder="Enter password" [type]="'password'">
+          </mat-form-field>
+      </div>
+      <div>
+          <mat-form-field appearance="outline">
+                  <mat-label>Confirm Password</mat-label>
+                  <input #confirmPass matInput placeholder="Confirm password" [type]="'password'">
+          </mat-form-field>
+      </div>
+      <div class="error-disabled" *ngIf="show">
+        <p>Email you have tried is already in use or Password does not match.</p>
+      </div>
+      <div>
+          <button mat-raised-button color="primary" class="login-button">Register</button>
+      </div>
+    </form>
+  </div>
+</div>

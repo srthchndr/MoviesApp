@@ -1,0 +1,13 @@
+<div *ngIf="movies" class='container'>
+  <div *ngFor="let movie of movies">
+        <app-card *ngIf="movie" [model] = movie></app-card>
+  </div>
+</div>
+<footer>
+  <mat-paginator [length]="length"
+  [pageSize]="pageSize"
+  (page)="pageEvent = $event">
+  </mat-paginator>
+</footer>
+
+
