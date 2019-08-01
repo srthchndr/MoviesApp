@@ -53,7 +53,7 @@ import { RegisterComponent } from './register/register.component';
     RouterModule.forRoot([
       {
         path: '',
-        component: AppComponent
+        component: LoginComponent
       },
       {
         path: 'movie',

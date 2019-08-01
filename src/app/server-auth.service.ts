@@ -12,8 +12,8 @@ export class ServerAuthService {
 
   constructor(private http: HttpClient) { }
 
-  authenticateUser(username: string, password: string){
-    return(this.http.post<serverResponse>('/api/login', {username, password}));
+  authenticateUser(uname: string, pword: string){
+    return(this.http.post<serverResponse>('/api/login', {username: uname, password: pword}));
   }
 
   registerUser(username: string, password: string){

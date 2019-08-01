@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,19 +19,19 @@ export class TmdbService {
     this.region = 'US';
   }
 
-  getNowPlaying(page: number){
+  getNowPlaying(page: number): Observable<any>{
     return( this.http.get(this.baseUrl+"movie/now_playing?api_key="+this.apiKey+"&page="+page+"&language="+this.language+"&region="+this.region))
   }
 
-  getMovie(id: number){
+  getMovie(id: number): Observable<any>{
     return this.http.get(this.baseUrl+"movie/"+id+"?api_key="+this.apiKey);
   }
   
-  getVideos(id: number){
+  getVideos(id: number): Observable<any>{
     return this.http.get(this.baseUrl+"movie/"+id+"/videos?api_key="+this.apiKey+"&language="+this.language);    
   }
 
-  getCast(id:number){
+  getCast(id:number): Observable<any>{
     return this.http.get(this.baseUrl+"movie/"+id+"/credits?api_key="+this.apiKey);
   }
   
